@@ -1,0 +1,14 @@
+.root {
+  position: relative;
+
+  transition: all .5s ease-out;
+}
+
+.question:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.question {
+}

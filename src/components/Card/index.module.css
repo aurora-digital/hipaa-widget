@@ -1,0 +1,19 @@
+@import "../../shared/variables.css";
+
+.root {
+  display: flex;
+  justify-content: center;
+  width: $modal-width;
+  height: $modal-height;
+}
+
+.content {
+  width: 100%;
+  min-height: 240px;
+  padding: 40px;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px 0 rgba(178, 185, 189, 0.4),
+    -5px 10px 60px 0 rgba(55, 124, 152, 0.2);
+}

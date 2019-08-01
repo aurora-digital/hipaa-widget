@@ -1,0 +1,26 @@
+@import "../../shared/variables.css";
+
+.root {
+}
+
+.title {
+  margin-bottom: 10px;
+
+  color: $bluish-grey;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.image {
+  width: 119px;
+  height: 20px;
+
+  background-color: $pale-grey;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hidden {
+  opacity: 0;
+}

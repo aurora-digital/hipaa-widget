@@ -9,6 +9,13 @@
   },
   "rules": {
     "eol-last": ["error", "always"],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
     "react/prefer-stateless-function": 0,
     "react/jsx-wrap-multilines": 0,
     "react/jsx-filename-extension": 0,

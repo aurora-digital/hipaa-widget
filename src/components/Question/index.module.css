@@ -1,0 +1,107 @@
+@import "../../shared/variables.css";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.title {
+  margin-bottom: 10px;
+
+  color: #3a7b96;
+
+  font-family: proxima-nova;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.explainer {
+  margin-bottom: 40px;
+
+  color: #92acb7;
+
+  font-family: proxima-nova;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.radio:not(:last-child) {
+  margin-right: 20px;
+}
+
+.questionAnswer {
+  margin-top: 20px;
+}
+
+.radio {
+  position: relative;
+
+  display: inline-block;
+  padding: 10px 20px 10px 40px;
+
+  background-color: #ffffff;
+  border: solid 1px $cerulean-two;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(9, 171, 241, 0.2);
+  cursor: pointer;
+
+  transition: all linear 0.2s;
+
+  &:hover {
+    top: 1px;
+
+    box-shadow: 0px 2px 4px 0 rgba(9, 171, 241, 0.3);
+  }
+
+  &::after {
+    content: " ";
+
+    position: absolute;
+    top: 50%;
+    left: 20px;
+
+    width: 14px;
+    height: 14px;
+
+    border: solid 1px $cerulean-two;
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+  }
+}
+
+.hidden {
+  position: absolute;
+
+  opacity: 0;
+
+  &:checked + .radio {
+    top: 1px;
+
+    box-shadow: 0px 2px 4px 0 rgba(9, 171, 241, 0.3);
+  }
+
+  &:checked + .radio::before {
+    content: " ";
+
+    position: absolute;
+    top: 50%;
+    left: 23px;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: $cerulean-two;
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+  }
+}
+
+.radiogroup {
+  margin-top: auto;
+}
