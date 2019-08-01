@@ -1,9 +1,15 @@
+import { hot } from "react-hot-loader/root";
 import React from "react";
 
+import StoreProvider from "../StoreProvider";
 import Form from "../Form";
 
 function App() {
-  return <Form />;
+  return (
+    <StoreProvider>
+      <Form />
+    </StoreProvider>
+  );
 }
 
-export default App;
+export default hot(App);
