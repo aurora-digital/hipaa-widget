@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+source "./bin/functions"
+
+pp_info "build" "Starting production build..."
+
+yarn build
+
+pp_info "build" "Build completed, find it at build/"

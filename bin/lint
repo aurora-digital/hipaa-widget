@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+set -e
+source "./bin/functions"
+
+pp_info "lint" "running eslint for javascript"
+yarn lint
+
+pp_info "lint" "running stylelint for css"
+yarn lint-styles
+
+pp_success "Done! No errors!"
