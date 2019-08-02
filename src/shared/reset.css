@@ -143,7 +143,7 @@ html,
 
   background-color: $pale-grey;
 
-  font-family: proxima-nova;
+  font-family: $font-monsterrat;
   -webkit-font-smoothing: antialiased;
 }
 

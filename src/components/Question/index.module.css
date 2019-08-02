@@ -12,7 +12,7 @@
 
   color: #3a7b96;
 
-  font-family: proxima-nova;
+  font-family: $font-monsterrat;
   font-size: 20px;
   font-weight: bold;
   line-height: 30px;
@@ -24,7 +24,7 @@
 
   color: #92acb7;
 
-  font-family: proxima-nova;
+  font-family: $font-monsterrat;
   font-size: 16px;
   line-height: 26px;
 }

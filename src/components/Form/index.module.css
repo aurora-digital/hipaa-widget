@@ -15,7 +15,7 @@
 
   color: $bluish-grey;
 
-  font-family: proxima-nova;
+  font-family: $font-monsterrat;
   font-size: 60px;
   font-weight: bold;
   line-height: 70px;

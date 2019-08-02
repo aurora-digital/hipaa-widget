@@ -20,7 +20,10 @@ const config = {
           {
             loader: "css-loader",
             options: {
-              modules: true
+              modules: {
+                mode: "local",
+                localIdentName: "[folder]__[local]--[hash:base64:5]"
+              }
             }
           },
           "postcss-loader"
