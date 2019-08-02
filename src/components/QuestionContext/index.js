@@ -1,15 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-
-import StoreContext from "../StoreProvider/StoreContext";
+import useStore from "root/shared/useStore";
 
 import styles from "./index.module.css";
 
 function QuestionContext({ category }) {
   const {
     state: { current, total }
-  } = useContext(StoreContext);
+  } = useStore();
+
   const [categoryFirstWord, ...categoryLastWords] = category.split(" ");
   const limitedCurrent = current > 10 ? 10 : current;
 

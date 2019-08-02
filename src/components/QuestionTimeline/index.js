@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import _ from "lodash";
 import classNames from "classnames";
-
-import StoreContext from "../StoreProvider/StoreContext";
+import useStore from "root/shared/useStore";
 
 import styles from "./index.module.css";
 
@@ -10,7 +9,7 @@ function QuestionTimeline() {
   const {
     state: { total, current },
     dispatch
-  } = useContext(StoreContext);
+  } = useStore();
 
   function renderItem(num) {
     const className = classNames({

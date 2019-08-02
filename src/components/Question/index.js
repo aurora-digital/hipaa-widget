@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import StoreContext from "../StoreProvider/StoreContext";
+import useStore from "root/shared/useStore";
+
 import RadioGroup from "../RadioGroup";
 import Card from "../Card";
 
@@ -10,7 +11,7 @@ function Question({ title, children, number }) {
   const {
     state: { answers },
     dispatch
-  } = useContext(StoreContext);
+  } = useStore();
 
   const onChange = value => {
     dispatch({ type: "submit_answer", payload: value });

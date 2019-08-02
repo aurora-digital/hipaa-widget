@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
-import StoreContext from "../StoreProvider/StoreContext";
+import React from "react";
+import useStore from "root/shared/useStore";
+
 import Card from "../Card";
 
 function FinalCard() {
-  const { dispatch } = useContext(StoreContext);
+  const { dispatch } = useStore();
 
   const handleBack = () => dispatch({ type: "select_question", payload: 10 });
 

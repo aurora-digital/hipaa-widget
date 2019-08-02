@@ -1,8 +1,9 @@
 import _ from "lodash";
-import React, { useContext } from "react";
+import React from "react";
 import useWindowDimensions from "root/shared/useWindowDimensions";
+import useStore from "root/shared/useStore";
+
 import Question from "../Question";
-import StoreContext from "../StoreProvider/StoreContext";
 import FinalCard from "../FinalCard";
 
 import styles from "./index.module.css";
@@ -10,7 +11,7 @@ import styles from "./index.module.css";
 function AnimatedQuestions() {
   const {
     state: { current, total }
-  } = useContext(StoreContext);
+  } = useStore();
   const { width } = useWindowDimensions();
   const windowWidth = width * 0.9;
   const style = {
