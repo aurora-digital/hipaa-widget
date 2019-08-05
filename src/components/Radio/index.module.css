@@ -26,14 +26,14 @@ $white: #ffffff;
   &:hover {
     top: 1px;
 
-    box-shadow: 0px 2px 4px 0 rgba(9,171,241, 0.3);
+    box-shadow: 0px 2px 4px 0 rgba(9, 171, 241, 0.3);
   }
 
   &::after {
     content: ' ';
 
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 7px;
 
     width: 14px;

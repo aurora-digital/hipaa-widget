@@ -1,0 +1,24 @@
+@import "../../shared/all.css";
+
+.root {
+  background-color: $klein-blue;
+
+  border: 2px solid white;
+
+  color: white;
+
+
+  cursor: pointer;
+  outline: none;
+
+  text-decoration: none;
+
+}
+
+.content {
+  padding: $spacing-8 $spacing-32;
+}
+
+.arrow {
+  padding: $spacing-8;
+}

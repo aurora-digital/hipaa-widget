@@ -1,0 +1,30 @@
+$spacing-8: 8px;
+$spacing-12: 12px;
+$spacing-20: 20px;
+$spacing-32: 32px;
+$spacing-52: 52px;
+$spacing-84: 84px;
+$spacing-136: 136px;
+$spacing-224: 224px;
+$spacing-352: 352px;
+$spacing-584: 584px;
+
+$column: 85px;
+$gutter: 32px;
+$column-spacing: calc(2 * $gutter + $column);
+$two-columns: calc(2 * $column + $gutter);
+$three-columns: calc(3 * $column + 2 * $gutter);
+$four-columns: calc(4 * $column + 3 * $gutter);
+$five-columns: calc(5 * $column + 4 * $gutter);
+$six-columns: calc(6 * $column + 5 * $gutter);
+$seven-columns: calc(7 * $column + 6 * $gutter);
+$eight-columns: calc(8 * $column + 7 * $gutter);
+$nine-columns: calc(9 * $column + 8 * $gutter);
+$ten-columns: calc(10 * $column + 9 * $gutter);
+$eleven-columns: calc(11 * $column + 10 * $gutter);
+$twelve-columns: calc(12 * $column + 11 * $gutter);
+
+$content-width-desktop: calc($ten-columns + 4px);
+$mobile-padding: 4vw;
+$separator-max-width: 1440px;
+$navbar-height: 133px;
