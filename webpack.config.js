@@ -14,7 +14,7 @@ const config = {
         exclude: /node_modules/
       },
       {
-        test: /\.(css|scss)$/,
+        test: /module\.(css|scss)$/,
         use: [
           "style-loader",
           {
@@ -28,6 +28,11 @@ const config = {
           },
           "postcss-loader"
         ]
+      },
+      {
+        test: /\.(css|scss)$/,
+        exclude: /module\.(css|scss)$/,
+        use: ["style-loader", "css-loader", "postcss-loader"]
       },
       {
         test: /\.(png|jpg|gif|svg|ico)$/,
