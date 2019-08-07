@@ -1,8 +1,8 @@
 import React from "react";
 
-import Button from "../Button";
-import LeftArrow from "../Icons/LeftArrow";
-import RightArrow from "../Icons/RightArrow";
+import Button from "root/components/Button";
+import LeftArrow from "root/components/Icons/LeftArrow";
+import RightArrow from "root/components/Icons/RightArrow";
 
 import styles from "./index.module.css";
 

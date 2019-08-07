@@ -1,0 +1,81 @@
+@import "../../styles/all.css";
+
+.root {
+  display: inline-block;
+}
+
+.h1 {
+  font-size: $font-size-h1;
+  line-height: $line-height-h1;
+
+  lower-font-range: $min-responsive-font-screen;
+  upper-font-range: $max-responsive-font-screen;
+}
+
+.h2 {
+  font-size: $font-size-h2;
+  line-height: $line-height-h2;
+
+  lower-font-range: $min-responsive-font-screen;
+  upper-font-range: $max-responsive-font-screen;
+}
+
+.h3 {
+  font-size: $font-size-h3;
+  line-height: $line-height-h3;
+
+  lower-font-range: $min-responsive-font-screen;
+  upper-font-range: $max-responsive-font-screen;
+}
+
+.body {
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+
+  lower-font-range: $min-responsive-font-screen;
+  upper-font-range: $max-responsive-font-screen;
+}
+
+.small-body {
+  font-size: $font-size-body-small;
+  line-height: $line-height-body-small;
+
+  lower-font-range: $min-responsive-font-screen;
+  upper-font-range: $max-responsive-font-screen;
+}
+
+.visuelt {
+  font-family: $font-family-visuelt;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.white {
+  color: white;
+}
+
+.oxford-blue {
+  color: $oxford-blue;
+}
+
+.klein-blue {
+  color: $klein-blue;
+}
+
+.baby-blue {
+  color: $baby-blue;
+}
+
+.alice-blue {
+  color: $alice-blue;
+}

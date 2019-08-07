@@ -1,4 +1,4 @@
-@import "../../shared/all.css";
+@import "../../styles/all.css";
 
 .root {
   background-color: $klein-blue;
@@ -7,18 +7,32 @@
 
   color: white;
 
-
   cursor: pointer;
   outline: none;
 
   text-decoration: none;
+}
 
+.root:hover {
+  background-color: white;
+
+  color: $klein-blue;
 }
 
 .content {
   padding: $spacing-8 $spacing-32;
 }
 
+.root:hover > .content {
+  color: $klein-blue;
+
+  text-decoration: none;
+}
+
 .arrow {
   padding: $spacing-8;
+}
+
+.root:hover > .arrow * {
+  stroke: $klein-blue;
 }

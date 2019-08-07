@@ -30,7 +30,7 @@ function reducer(state, action) {
   }
 }
 
-function Store({ children }) {
+function StoreProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
   return (
@@ -40,8 +40,8 @@ function Store({ children }) {
   );
 }
 
-Store.propTypes = {
+StoreProvider.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default Store;
+export default StoreProvider;

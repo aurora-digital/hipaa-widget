@@ -9,7 +9,7 @@ $spacing-224: 224px;
 $spacing-352: 352px;
 $spacing-584: 584px;
 
-$column: 85px;
+$column: 124px;
 $gutter: 32px;
 $column-spacing: calc(2 * $gutter + $column);
 $two-columns: calc(2 * $column + $gutter);
@@ -20,11 +20,8 @@ $six-columns: calc(6 * $column + 5 * $gutter);
 $seven-columns: calc(7 * $column + 6 * $gutter);
 $eight-columns: calc(8 * $column + 7 * $gutter);
 $nine-columns: calc(9 * $column + 8 * $gutter);
-$ten-columns: calc(10 * $column + 9 * $gutter);
-$eleven-columns: calc(11 * $column + 10 * $gutter);
-$twelve-columns: calc(12 * $column + 11 * $gutter);
 
-$content-width-desktop: calc($ten-columns + 4px);
+$content-width-desktop: $seven-columns;
 $mobile-padding: 4vw;
 $separator-max-width: 1440px;
 $navbar-height: 133px;

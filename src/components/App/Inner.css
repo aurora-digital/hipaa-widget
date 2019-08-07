@@ -1,0 +1,49 @@
+@import "../../styles/all.css";
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  overflow: hidden;
+}
+
+.page {
+  max-width: $content-width-desktop;
+  margin: 0 auto;
+}
+
+.pageSliderLeft-enter {
+  transform: translate3d(100%, 0, 0);
+}
+.pageSliderLeft-enter.pageSliderLeft-enter-active {
+  transform: translate3d(0, 0, 0);
+
+  transition: all 600ms;
+}
+.pageSliderLeft-exit {
+  transform: translate3d(0, 0, 0);
+}
+.pageSliderLeft-exit.pageSliderLeft-exit-active {
+  transform: translate3d(-100%, 0, 0);
+
+  transition: all 600ms;
+}
+
+.pageSliderRight-enter {
+  transform: translate3d(-100%, 0, 0);
+}
+.pageSliderRight-enter.pageSliderRight-enter-active {
+  transform: translate3d(0, 0, 0);
+
+  transition: all 600ms;
+}
+.pageSliderRight-exit {
+  transform: translate3d(0, 0, 0);
+}
+.pageSliderRight-exit.pageSliderRight-exit-active {
+  transform: translate3d(100%, 0, 0);
+
+  transition: all 600ms;
+}

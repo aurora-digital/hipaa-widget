@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const nodeEnv = process.env.NODE_ENV || "development";
 
@@ -51,10 +52,11 @@ const config = {
   devtool: nodeEnv === "development" ? "source-map" : "none",
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "public/index.html"),
-      favicon: path.join(__dirname, "public/favicon.ico"),
+      template: path.join(__dirname, "static/index.html"),
+      favicon: path.join(__dirname, "static/favicon.ico"),
       inject: "body"
-    })
+    }),
+    new CopyWebpackPlugin([{ from: "static" }])
   ],
   output: {
     path: path.join(__dirname, "/build"),

@@ -1,0 +1,17 @@
+@import "../../styles/all.css";
+
+.root {
+  height: 22px;
+}
+
+.logo-svg-white {
+  path {
+    fill: white;
+  }
+}
+
+.logo-svg-klein-blue {
+  path {
+    fill: $klein-blue;
+  }
+}

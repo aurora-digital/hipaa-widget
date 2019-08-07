@@ -1,4 +1,4 @@
-@import "./variables.css";
+@import "./all.css";
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -128,6 +128,13 @@ q:after {
   content: none;
 }
 
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -141,9 +148,8 @@ html,
   height: 100%;
   overflow: hidden;
 
-  background-color: $pale-grey;
+  background-color: $klein-blue;
 
-  font-family: $font-monsterrat;
   -webkit-font-smoothing: antialiased;
 }
 

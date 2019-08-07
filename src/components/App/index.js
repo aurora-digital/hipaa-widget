@@ -1,15 +1,18 @@
-import { hot } from "react-hot-loader/root";
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
-import StoreProvider from "../StoreProvider";
-import Form from "../Form";
+import StoreProvider from "root/components/StoreProvider";
+
+import AnimatedSwitch from "./Inner";
 
 function App() {
   return (
     <StoreProvider>
-      <Form />
+      <BrowserRouter>
+        <AnimatedSwitch />
+      </BrowserRouter>
     </StoreProvider>
   );
 }
 
-export default hot(App);
+export default App;
