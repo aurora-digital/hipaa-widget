@@ -1,6 +1,8 @@
 @import "../../styles/all.css";
 
 .root {
+  position: relative;
+
   background-color: transparent;
 
   border: 2px solid white;
@@ -19,20 +21,37 @@
   color: $klein-blue;
 }
 
+.emoji {
+  position: absolute;
+
+  top: 0;
+
+  left: calc(calc($spacing-32 + $spacing-20) * -1);
+
+  display: none;
+
+  @include body-small-responsive-font;
+
+}
+
 .content {
   padding: $spacing-8 $spacing-32;
 }
 
-.root:hover > .content {
+.root:hover>.content {
   color: $klein-blue;
 
   text-decoration: none;
+}
+
+.root:hover>.emoji {
+  display: block;
 }
 
 .arrow {
   padding: $spacing-8;
 }
 
-.root:hover > .arrow * {
+.root:hover>.arrow * {
   stroke: $klein-blue;
 }

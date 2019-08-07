@@ -1,5 +1,6 @@
 @import "../../styles/all.css";
 
+
 .root {
   display: flex;
   flex-direction: row;
@@ -79,13 +80,13 @@
 
   opacity: 0;
 
-  &:checked + .radio {
+  &:checked+.radio {
     top: 1px;
 
     box-shadow: 0px 2px 4px 0 rgba(9, 171, 241, 0.3);
   }
 
-  &:checked + .radio::before {
+  &:checked+.radio::before {
     content: " ";
 
     position: absolute;

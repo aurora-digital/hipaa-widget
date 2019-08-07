@@ -14,6 +14,9 @@ const Button = ({ onClick, children, arrow, element }) => {
       <InnerElement className={arrow ? styles.arrow : styles.content}>
         {children}
       </InnerElement>
+      <span role="img" aria-label="point right" className={styles.emoji}>
+        👉
+      </span>
     </Element>
   );
 };
