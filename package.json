@@ -29,7 +29,6 @@
     "precss": "^4.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "npm:@hot-loader/react-dom",
     "react-hot-loader": "^4.12.10",
     "react-router": "^5.0.1",

@@ -7,11 +7,11 @@ import AnimatedSwitch from "./Inner";
 
 function App() {
   return (
-    <StoreProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <StoreProvider>
         <AnimatedSwitch />
-      </BrowserRouter>
-    </StoreProvider>
+      </StoreProvider>
+    </BrowserRouter>
   );
 }
 

@@ -4,7 +4,7 @@ import { Route, Switch, withRouter } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Home from "root/pages/Home";
-import Form from "root/pages/Form";
+import Questions from "root/pages/Questions";
 
 import "./Inner.css";
 
@@ -22,7 +22,7 @@ function Inner({ location }) {
           <div className="page">
             <Switch location={location}>
               <Route exact path="/" component={Home} />
-              <Route exact path="/questions" component={Form} />
+              <Route exact path="/questions" component={Questions} />
             </Switch>
           </div>
         </div>

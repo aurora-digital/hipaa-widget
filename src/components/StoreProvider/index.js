@@ -1,37 +1,16 @@
 import React, { useReducer } from "react";
 import PropTypes from "prop-types";
 
+import { reducer, initialState } from "./reducer";
 import StoreContext from "./StoreContext";
 
-const INITIAL_STATE = {
-  total: 10,
-  current: 1,
-  answers: {}
-};
-
-function reducer(state, action) {
-  switch (action.type) {
-    case "submit_answer":
-      return {
-        ...state,
-        current: state.current + 1,
-        answers: {
-          ...state.answers,
-          [state.current]: action.payload
-        }
-      };
-    case "select_question":
-      return {
-        ...state,
-        current: action.payload
-      };
-    default:
-      throw new Error();
-  }
-}
-
 function StoreProvider({ children }) {
-  const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  if (process.env.NODE_ENV === "development") {
+    // eslint-disable-next-line no-underscore-dangle
+    window.__STORE__ = { state, dispatch };
+  }
 
   return (
     <StoreContext.Provider value={{ state, dispatch }}>

@@ -1,22 +1,22 @@
-@import "../../styles/variables.css";
+@import "../../styles/all.css";
 
-.content {
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.question {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
+  max-width: $four-columns;
 }
 
-.title {
-  margin-bottom: 10px;
-
-  color: #3a7b96;
-
-  font-family: $font-monsterrat;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 30px;
-  text-transform: uppercase;
+.description {
+  margin-top: $spacing-32;
 }
 
 .explainer {

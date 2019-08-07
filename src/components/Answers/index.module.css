@@ -1,0 +1,10 @@
+@import "../../styles/all.css";
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.root > * + * {
+  margin-top: $spacing-12;
+}

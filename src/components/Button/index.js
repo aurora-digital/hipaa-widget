@@ -5,12 +5,12 @@ import Typography from "root/components/Typography";
 
 import styles from "./index.module.css";
 
-const Button = ({ handleClick, children, arrow, element }) => {
+const Button = ({ onClick, children, arrow, element }) => {
   const Element = element;
   const InnerElement = arrow ? "div" : Typography;
 
   return (
-    <Element className={styles.root} onClick={handleClick} type="button">
+    <Element className={styles.root} onClick={onClick} type="button">
       <InnerElement className={arrow ? styles.arrow : styles.content}>
         {children}
       </InnerElement>
@@ -19,14 +19,14 @@ const Button = ({ handleClick, children, arrow, element }) => {
 };
 
 Button.propTypes = {
-  handleClick: PropTypes.func,
+  onClick: PropTypes.func,
   children: PropTypes.node.isRequired,
   arrow: PropTypes.bool,
   element: PropTypes.string
 };
 
 Button.defaultProps = {
-  handleClick: null,
+  onClick: null,
   arrow: false,
   element: "button"
 };

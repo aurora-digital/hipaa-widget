@@ -1,0 +1,32 @@
+@import "../../styles/all.css";
+
+.root {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  background-color: $klein-blue;
+}
+
+.questionWrapper {
+  position: fixed;
+  top: $spacing-224;
+  right: 0;
+  left: 0;
+}
+
+.question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: $seven-columns;
+  margin: 0 auto;
+}
+
+.question > *:last-child {
+  width: $two-columns;
+}
