@@ -1,8 +1,8 @@
 # Hipaa Widget
 
-Are you HIPPA? is a tool to help developers the entrepreneurs understand if an application is HIPAA compliant. HIPAA stands for Health Insurance Portability and Accountability Act. The goal of this law is to ensure confidentiality and security of healthcare information.
+Are you HIPAA? is a tool to help developers the entrepreneurs understand if an application is HIPAA compliant. HIPAA stands for Health Insurance Portability and Accountability Act. The goal of this law is to ensure confidentiality and security of healthcare information.
 
-HIPAA is long and complex, and most small businesses cannot afford a legal team. Are you HIPPA? is a survey that determine if an applicatin is HIPAA compliant and provides information on what steps to take to make it.
+HIPAA is long and complex, and most small businesses cannot afford a legal team. Are you HIPAA? is a survey that determine if an applicatin is HIPAA compliant and provides information on what steps to take to make it.
 
 ## Development
 
