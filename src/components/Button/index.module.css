@@ -1,7 +1,7 @@
 @import "../../styles/all.css";
 
 .root {
-  background-color: $klein-blue;
+  background-color: transparent;
 
   border: 2px solid white;
 

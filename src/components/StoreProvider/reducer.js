@@ -24,6 +24,18 @@ export function reducer(state, action) {
         current: action.payload
       };
 
+    case "prev_question":
+      return {
+        ...state,
+        current: state.current - 1
+      };
+
+    case "next_question":
+      return {
+        ...state,
+        current: state.current + 1
+      };
+
     default:
       throw new Error();
   }

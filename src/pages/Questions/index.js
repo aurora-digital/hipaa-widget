@@ -6,6 +6,7 @@ import useStore from "root/shared/useStore";
 import questionsData from "root/shared/questionsData";
 import Question from "root/components/Question";
 import Answers from "root/components/Answers";
+import Footer from "root/components/Footer";
 
 import styles from "./index.module.css";
 
@@ -32,6 +33,10 @@ function Questions() {
           </div>
         </motion.div>
       </AnimatePresence>
+
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </section>
   );
 }

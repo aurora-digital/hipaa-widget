@@ -1,0 +1,11 @@
+@import "../../styles/all.css";
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-20 0;
+}
+
+.arrows > * + * {
+  margin-left: $spacing-12;
+}

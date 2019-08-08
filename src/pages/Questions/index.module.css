@@ -30,3 +30,15 @@
 .question > *:last-child {
   width: $two-columns;
 }
+
+.footer {
+  width: 100vw;
+  margin-top: auto;
+
+  background-color: $oxford-blue;
+}
+
+.footer > * {
+  max-width: $content-width-desktop;
+  margin: 0 auto;
+}
