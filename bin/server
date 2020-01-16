@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-source "./bin/functions"
+. "./bin/functions"
 
 pp_info "client" "Starting development client..."
 yarn dev
