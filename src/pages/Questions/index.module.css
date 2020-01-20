@@ -1,8 +1,6 @@
 @import "../../styles/all.css";
 
 .root {
-  position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,11 +9,17 @@
   background-color: $klein-blue;
 }
 
-.questionWrapper {
-  position: fixed;
+.gallery {
+  position: absolute;
   top: $spacing-224;
-  right: 0;
   left: 0;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.questionWrapper {
+  width: 100vw;
 }
 
 .question {

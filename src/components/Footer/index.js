@@ -1,25 +1,26 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { prevQuestion, nextQuestion } from "root/redux/actions";
 
-import useStore from "root/shared/useStore";
 import Typography from "root/components/Typography";
 
-import styles from "./index.module.css";
 import Button from "../Button";
 import LeftArrow from "../Icons/LeftArrow";
 import RightArrow from "../Icons/RightArrow";
 
+import styles from "./index.module.css";
+
 function Footer() {
-  const {
-    state: { current, total },
-    dispatch
-  } = useStore();
+  const current = useSelector(state => state.current);
+  const total = useSelector(state => state.total);
+  const dispatch = useDispatch();
 
   function onLeftClick() {
-    if (current > 1) dispatch({ type: "prev_question" });
+    if (current > 1) dispatch(prevQuestion());
   }
 
   function onRightClick() {
-    if (current < total) dispatch({ type: "next_question" });
+    if (current < total) dispatch(nextQuestion());
   }
 
   return (

@@ -2,7 +2,6 @@
 
 .root {
   position: relative;
-
   background-color: transparent;
 
   border: 2px solid white;
@@ -15,7 +14,8 @@
   text-decoration: none;
 }
 
-.root:hover {
+.root:hover,
+.root.active {
   background-color: white;
 
   color: $klein-blue;
@@ -31,20 +31,21 @@
   display: none;
 
   @include body-small-responsive-font;
-
 }
 
 .content {
   padding: $spacing-8 $spacing-32;
 }
 
-.root:hover>.content {
+.root:hover > .content,
+.root.active > .content {
   color: $klein-blue;
 
   text-decoration: none;
 }
 
-.root:hover>.emoji {
+.root:hover > .emoji,
+.root.active > .emoji {
   display: block;
 }
 
@@ -52,6 +53,7 @@
   padding: $spacing-8;
 }
 
-.root:hover>.arrow * {
+.root:hover > .arrow *,
+.root.active > .arrow * {
   stroke: $klein-blue;
 }

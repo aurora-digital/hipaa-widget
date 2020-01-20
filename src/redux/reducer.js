@@ -1,14 +1,20 @@
 import questionsData from "root/shared/questionsData";
+import {
+  SUBMIT_ANSWER,
+  SELECT_QUESTION,
+  NEXT_QUESTION,
+  PREV_QUESTION
+} from "./actionTypes";
 
-export const initialState = {
+const initialState = {
   total: questionsData.length,
   current: 1,
   answers: {}
 };
 
-export function reducer(state, action) {
+export default function(state = initialState, action) {
   switch (action.type) {
-    case "submit_answer":
+    case SUBMIT_ANSWER:
       return {
         ...state,
         current: state.current + 1,
@@ -18,25 +24,25 @@ export function reducer(state, action) {
         }
       };
 
-    case "select_question":
+    case SELECT_QUESTION:
       return {
         ...state,
         current: action.payload
       };
 
-    case "prev_question":
-      return {
-        ...state,
-        current: state.current - 1
-      };
-
-    case "next_question":
+    case NEXT_QUESTION:
       return {
         ...state,
         current: state.current + 1
       };
 
+    case PREV_QUESTION:
+      return {
+        ...state,
+        current: state.current - 1
+      };
+
     default:
-      throw new Error();
+      return state;
   }
 }

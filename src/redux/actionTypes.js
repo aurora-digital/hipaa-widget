@@ -1,0 +1,4 @@
+export const SUBMIT_ANSWER = "SUBMIT_ANSWER";
+export const SELECT_QUESTION = "SELECT_QUESTION";
+export const NEXT_QUESTION = "NEXT_QUESTION";
+export const PREV_QUESTION = "PREV_QUESTION";

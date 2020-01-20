@@ -1,17 +1,19 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import StoreProvider from "root/components/StoreProvider";
+import { Provider } from "react-redux";
+
+import store from "root/redux/store";
 
 import AnimatedSwitch from "./Inner";
 
 function App() {
   return (
-    <BrowserRouter>
-      <StoreProvider>
+    <Provider store={store}>
+      <BrowserRouter>
         <AnimatedSwitch />
-      </StoreProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

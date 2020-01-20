@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { motion, AnimatePresence } from "framer-motion";
+import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
-import useStore from "root/shared/useStore";
 import questionsData from "root/shared/questionsData";
 import Question from "root/components/Question";
 import Answers from "root/components/Answers";
@@ -11,28 +11,28 @@ import Footer from "root/components/Footer";
 import styles from "./index.module.css";
 
 function Questions() {
-  const {
-    state: { current }
-  } = useStore();
+  const current = useSelector(state => state.current);
+  const answers = useSelector(state => state.answers);
 
   return (
     <section className={styles.root}>
-      <AnimatePresence initial={false}>
-        <motion.div
-          className={styles.questionWrapper}
-          key={current}
-          initial={{ x: "100%" }}
-          animate={{ x: 0 }}
-          exit={{ x: "-100%" }}
-          transition={{ duration: 0.25, type: "spring" }}
-        >
-          <div className={styles.question}>
-            <Question {...questionsData[current - 1]} />
+      <motion.div
+        className={styles.gallery}
+        initial={false}
+        animate={{ x: `-${((current - 1) * 100) / questionsData.length}%` }}
+        transition={{ duration: 0.8 }}
+      >
+        {questionsData.map((question, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <div className={styles.questionWrapper} key={index}>
+            <div className={styles.question}>
+              <Question {...question} />
 
-            <Answers options={questionsData[current - 1].options} />
+              <Answers options={question.options} answer={answers[index + 1]} />
+            </div>
           </div>
-        </motion.div>
-      </AnimatePresence>
+        ))}
+      </motion.div>
 
       <div className={styles.footer}>
         <Footer />

@@ -1,23 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withRouter } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
-import useStore from "root/shared/useStore";
+import { submitAnswer } from "root/redux/actions";
 
 import Button from "../Button";
 
 import styles from "./index.module.css";
 
-function Answers({ options }) {
-  const { dispatch } = useStore();
+function Answers({ options, answer }) {
+  const dispatch = useDispatch();
 
   function renderOption(option) {
     function onClick() {
-      dispatch({ type: "submit_answer", payload: option.value });
+      dispatch(submitAnswer(option.value));
     }
 
     return (
-      <Button key={option.value} onClick={onClick}>
+      <Button
+        key={option.value}
+        onClick={onClick}
+        active={answer === option.value}
+        emoji
+      >
         {option.label}
       </Button>
     );
@@ -33,9 +38,11 @@ Answers.propTypes = {
       label: PropTypes.string.isRequired
     }).isRequired
   ).isRequired,
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired
-  }).isRequired
+  answer: PropTypes.string
 };
 
-export default withRouter(Answers);
+Answers.defaultProps = {
+  answer: null
+};
+
+export default Answers;
