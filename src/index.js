@@ -5,7 +5,6 @@ import App from "./components/App";
 import * as serviceWorker from "./shared/serviceWorker";
 
 import "./styles/reset.css";
-import "./styles/fonts.css";
 
 render(<App />, document.getElementById("root"));
 
