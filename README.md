@@ -25,7 +25,7 @@ If you intend on making a contribution, don't forget to run `bin/lint`
 
 This is a simple React app built with a custom webpack config. It uses CSS modules with the `className` prop, just make sure to name your files accordingly: `filename.css` for regular global css and `filename.module.css` for modules (check existing usages for examples).
 
-The app makes use of a simplified global store via a custom hook `useStore`.
+The app state is maintaned via Redux. Components in the React tree interact with this store with React Hooks!
 
 ## Contributing
 
