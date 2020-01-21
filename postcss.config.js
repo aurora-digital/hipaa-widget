@@ -1,7 +1,7 @@
 module.exports = () => ({
   plugins: {
-    precss: {},
     "postcss-import": {},
+    precss: {},
     "postcss-responsive-type": {}
   }
 });

@@ -26,7 +26,10 @@ function Questions() {
           // eslint-disable-next-line react/no-array-index-key
           <div className={styles.questionWrapper} key={index}>
             <div className={styles.question}>
-              <Question {...question} />
+              <Question
+                title={question.title}
+                description={question.description}
+              />
 
               <Answers options={question.options} answer={answers[index + 1]} />
             </div>
