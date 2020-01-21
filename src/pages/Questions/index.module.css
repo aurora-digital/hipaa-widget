@@ -16,6 +16,10 @@
 
   display: flex;
   flex-direction: row;
+
+  @include Breakpoint-tabletAndBelow {
+    top: $spacing-136;
+  }
 }
 
 .questionWrapper {
@@ -25,14 +29,33 @@
 .question {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-
   width: $seven-columns;
   margin: 0 auto;
+
+  @include Breakpoint-tabletAndBelow {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 $spacing-20;
+  }
 }
 
 .question > *:last-child {
-  width: $two-columns;
+  @include Breakpoint-desktopOnly {
+    width: $two-columns;
+  }
+}
+
+.answers {
+  @include Breakpoint-tabletAndBelow {
+    width: $three-columns;
+    padding-top: $spacing-32;
+  }
+
+  @include Breakpoint-mobileOnly {
+    width: 100%;
+  }
 }
 
 .footer {

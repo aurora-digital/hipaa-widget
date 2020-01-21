@@ -30,8 +30,12 @@ function Questions() {
                 title={question.title}
                 description={question.description}
               />
-
-              <Answers options={question.options} answer={answers[index + 1]} />
+              <div className={styles.answers}>
+                <Answers
+                  options={question.options}
+                  answer={answers[index + 1]}
+                />
+              </div>
             </div>
           </div>
         ))}

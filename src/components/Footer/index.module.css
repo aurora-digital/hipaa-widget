@@ -4,6 +4,10 @@
   display: flex;
   justify-content: space-between;
   padding: $spacing-20 0;
+
+  @include Breakpoint-tabletAndBelow {
+    padding: $spacing-20;
+  }
 }
 
 .arrows > * + * {
