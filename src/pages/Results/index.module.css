@@ -54,8 +54,8 @@
   margin-top: $spacing-136;
 
   .columnsContainer {
-    display: flex;
-    flex-flow: wrap;
+    /*display: flex;
+    flex-flow: wrap;*/
   }
 
   .rule {

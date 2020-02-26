@@ -7,9 +7,27 @@
 }
 
 .title {
+  display: flex;
+
+  padding: 0;
   margin-bottom: $spacing-12;
 
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+  outline: none;
+
   span {
-    margin: 0 $spacing-12;
+    margin-left: $spacing-12;
   }
+
+  svg {
+    margin-left: $spacing-12;
+  }
+}
+
+.title > * {
+  align-self: center;
 }
