@@ -1,0 +1,32 @@
+@import "../../styles/all.css";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  text-align: center;
+}
+
+.title {
+  margin-top: calc((2 * $spacing-84) + $spacing-12);
+  margin-bottom: $spacing-52;
+}
+
+.button {
+  margin-top: $spacing-84;
+}
+
+.powered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin-top: auto;
+  margin-bottom: $spacing-32;
+}
+
+.powered > * + * {
+  margin-left: $spacing-20;
+}

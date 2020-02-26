@@ -14,7 +14,7 @@ function Inner({ location, history }) {
   const current = useSelector(state => state.current);
 
   useEffect(() => {
-    if (current > 10) history.push("/results");
+    if (current > 8) history.push("/results");
   }, [current]);
 
   return (

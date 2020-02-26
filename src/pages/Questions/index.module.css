@@ -34,7 +34,14 @@
   width: $seven-columns;
   margin: 0 auto;
 
-  @include Breakpoint-tabletAndBelow {
+  @include Breakpoint-tabletOnly {
+    flex-direction: column;
+    align-items: start;
+    max-width: $four-columns;
+    padding: 0 $spacing-20;
+  }
+
+  @include Breakpoint-mobileOnly {
     flex-direction: column;
     width: 100%;
     padding: 0 $spacing-20;
@@ -48,13 +55,14 @@
 }
 
 .answers {
-  @include Breakpoint-tabletAndBelow {
+  @include Breakpoint-tabletOnly {
     width: $three-columns;
     padding-top: $spacing-32;
   }
 
   @include Breakpoint-mobileOnly {
     width: 100%;
+    padding-top: $spacing-32;
   }
 }
 
