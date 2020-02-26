@@ -1,0 +1,66 @@
+@import "../../styles/all.css";
+
+.root {
+  position: relative;
+
+  display: block;
+
+  height: 100vh;
+
+  padding-top: $spacing-52;
+
+  .title {
+    text-align: center;
+  }
+}
+
+.result {
+  margin-top: $spacing-32;
+}
+
+.footer {
+  justify-content: center;
+
+  width: 100%;
+
+  margin-top: $spacing-84;
+  margin-bottom: $spacing-52;
+
+  text-align: center;
+
+  a {
+    border-bottom: 1px solid white;
+
+    color: white;
+  }
+
+  span {
+    margin: 0 $spacing-12;
+  }
+
+  .container {
+    display: flex;
+
+    flex-direction: column;
+
+    max-width: $five-columns;
+    margin: 0 auto;
+  }
+}
+
+.rules {
+  width: 100%;
+
+  margin-top: $spacing-136;
+
+  .columnsContainer {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .rule {
+    flex: 0 50%;
+    padding-right: $spacing-20;
+    margin-top: $spacing-20;
+  }
+}

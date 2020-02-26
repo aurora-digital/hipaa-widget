@@ -1,0 +1,15 @@
+@import "../../styles/all.css";
+
+.root {
+  display: block;
+
+  text-align: left;
+}
+
+.title {
+  margin-bottom: $spacing-12;
+
+  span {
+    margin: 0 $spacing-12;
+  }
+}
