@@ -10,7 +10,6 @@ import styles from "./index.module.css";
 
 function Results() {
   const answers = useSelector(state => state.answers);
-  console.log(answers);
 
   const displayResult = () => {
     const yesAnswer = filter(answers, answer => {
@@ -67,19 +66,17 @@ function Results() {
             👇
           </span>
         </Typography>
-        <div className={styles.columnsContainer}>
-          {map(resultsData, ({ title, description }, index) => {
-            return (
-              <div className={styles.rule} key={index}>
-                <Rule
-                  checked={answers[index] === "yes"}
-                  title={title}
-                  description={description}
-                />
-              </div>
-            );
-          })}
-        </div>
+        {map(resultsData, ({ title, description }, index) => {
+          return (
+            <div className={styles.rule} key={index}>
+              <Rule
+                checked={answers[index] === "yes"}
+                title={title}
+                description={description}
+              />
+            </div>
+          );
+        })}
       </div>
     );
   };
@@ -97,13 +94,7 @@ function Results() {
       <div className={styles.footer}>
         <div className={styles.container}>
           <Typography color="baby-blue">
-            <span role="img" aria-label="bell emoji">
-              🔔
-            </span>
             This is not a legal advice about HIPAA compliance.
-            <span role="img" aria-label="bell emoji">
-              🔔
-            </span>
           </Typography>
           <Typography color="baby-blue">
             Questions about HIPAA compliance? any suggestions? Contact us to

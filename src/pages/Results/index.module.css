@@ -43,7 +43,6 @@
 
     flex-direction: column;
 
-    max-width: $five-columns;
     margin: 0 auto;
   }
 }
@@ -53,13 +52,7 @@
 
   margin-top: $spacing-136;
 
-  .columnsContainer {
-    /*display: flex;
-    flex-flow: wrap;*/
-  }
-
   .rule {
-    flex: 0 50%;
     padding-right: $spacing-20;
     margin-top: $spacing-20;
   }
