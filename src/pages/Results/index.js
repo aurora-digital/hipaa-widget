@@ -4,17 +4,21 @@ import { useSelector } from "react-redux";
 import filter from "lodash/filter";
 import Button from "root/components/Button";
 import Logo from "root/components/Logo";
+import { Link } from "react-router-dom";
 
 import styles from "./index.module.css";
 
 function Results() {
-  const answers = useSelector(state => state.answers);
-  const yesAnswer = filter(answers, answer => {
-    return answer === "yes";
-  });
+  const yesAnswers = () => {
+    const answers = useSelector(state => state.answers);
+
+    return filter(answers, answer => {
+      return answer === "yes";
+    });
+  };
 
   const getTitle = () => {
-    return yesAnswer.length < 5 ? (
+    return yesAnswers().length < 5 ? (
       <div className={styles.result}>
         <Typography weight="bold" variant="h2">
           It could be better
@@ -32,14 +36,15 @@ function Results() {
   return (
     <div className={styles.root}>
       <div className={styles.title}>{getTitle()}</div>
-
-      <Typography variant="body">
-        You&apos;ve covered <span>{`${yesAnswer.length} of the 8`}</span> HIPAA
-        compliance requirments
-      </Typography>
-      <div className={styles.button}>
-        <Button>Check all requirements</Button>
+      <div className={styles.result}>
+        <Typography variant="body">
+          You&apos;ve covered <span>{`${yesAnswers().length} of the 8`}</span>{" "}
+          HIPAA compliance requirements
+        </Typography>
       </div>
+      <Link className={styles.button} to="/compliance-requirements">
+        <Button>Check all requirements</Button>
+      </Link>
 
       <div className={styles.powered}>
         <Typography color="baby-blue">Powered by</Typography>

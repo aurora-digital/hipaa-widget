@@ -6,7 +6,11 @@
   align-items: center;
   height: 100vh;
 
+  max-width: $content-width-desktop;
+
   padding-top: $spacing-224;
+
+  margin: 0 auto;
 
   background-color: $klein-blue;
 }

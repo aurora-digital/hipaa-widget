@@ -1,0 +1,53 @@
+@import "../../styles/all.css";
+
+.root {
+  padding: 0 $spacing-32 $spacing-52 $spacing-32;
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: calc($spacing-20 - 2px);
+
+  background-color: white;
+
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  .title {
+    display: flex;
+
+    svg {
+      margin-left: $spacing-12;
+    }
+  }
+}
+
+.line {
+  position: relative;
+  z-index: 1;
+
+  width: calc(100% + $spacing-32 + $spacing-32);
+
+  height: 2px;
+
+  margin-left: calc($spacing-32 * -1);
+
+  background-color: $baby-blue;
+}
+
+.description {
+  position: relative;
+  z-index: 0;
+
+  overflow: hidden;
+
+  transform: translateY(0px) translateZ(0px);
+}

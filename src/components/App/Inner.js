@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Home from "root/pages/Home";
 import Questions from "root/pages/Questions";
 import Results from "root/pages/Results";
+import ComplianceRequirements from "root/pages/ComplianceRequirements";
 
 import "./Inner.css";
 
@@ -27,13 +28,16 @@ function Inner({ location, history }) {
         transition={{ duration: 0.5, stiffness: 0.1 }}
       >
         <div className="wrapper">
-          <div className="page">
-            <Switch location={location}>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/questions" component={Questions} />
-              <Route exact path="/results" component={Results} />
-            </Switch>
-          </div>
+          <Switch location={location}>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/questions" component={Questions} />
+            <Route exact path="/results" component={Results} />
+            <Route
+              exact
+              path="/compliance-requirements"
+              component={ComplianceRequirements}
+            />
+          </Switch>
         </div>
       </motion.div>
     </AnimatePresence>
