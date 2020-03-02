@@ -3,6 +3,8 @@
 .root {
   position: relative;
 
+  padding: $spacing-12;
+
   background-color: transparent;
 
   border: 2px solid white;
@@ -11,6 +13,8 @@
 
   cursor: pointer;
   outline: none;
+
+  text-align: left;
 
   text-decoration: none;
 }
@@ -22,39 +26,28 @@
   color: $klein-blue;
 }
 
-.emoji {
-  position: absolute;
-
-  top: 0;
-
-  left: calc(calc($spacing-32 + $spacing-20) * -1);
-
-  display: none;
-
-  @include body-small-responsive-font;
-}
-
-.content {
-  padding: $spacing-8 $spacing-32;
-}
-
-.root:hover > .content,
-.root.active > .content {
+.root:hover > *,
+.root.active > * {
   color: $klein-blue;
 
   text-decoration: none;
 }
 
-.root:hover > .emoji,
-.root.active > .emoji {
-  display: block;
+.root:hover *,
+.root.active * {
+  stroke: $oxford-blue;
 }
 
-.arrow {
-  padding: $spacing-8;
+.small {
+  width: $column;
+
+  padding: $spacing-8 0;
+
+  text-align: center;
 }
 
-.root:hover > .arrow *,
-.root.active > .arrow * {
-  stroke: $klein-blue;
+.medium {
+  width: $two-columns;
+
+  padding: $spacing-8 $gutter;
 }

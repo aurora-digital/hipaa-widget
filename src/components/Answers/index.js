@@ -21,7 +21,7 @@ function Answers({ options, answer }) {
         key={option.value}
         onClick={onClick}
         active={answer === option.value}
-        emoji
+        size="medium"
       >
         {option.label}
       </Button>

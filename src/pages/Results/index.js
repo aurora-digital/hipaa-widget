@@ -43,7 +43,7 @@ function Results() {
         </Typography>
       </div>
       <Link className={styles.button} to="/compliance-requirements">
-        <Button>Check all requirements</Button>
+        <Button size="medium">Check all requirements</Button>
       </Link>
 
       <div className={styles.powered}>

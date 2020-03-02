@@ -14,9 +14,9 @@
 }
 
 .content {
-  max-width: $content-width-desktop;
+  max-width: calc($five-columns + $gutter + $gutter);
 
-  padding: $spacing-84 0 $spacing-52 0;
+  padding: $spacing-84 $gutter $spacing-52 $gutter;
 
   margin: 0 auto;
 }

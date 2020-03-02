@@ -32,14 +32,14 @@ function Requirement({ title, description, checked }) {
       </button>
       <div className={styles.line} />
       <motion.div
-        initial={{ height: "0px", marginTop: "0px" }}
-        exit={{ height: "0px", marginTop: "0px" }}
+        initial={{ height: "0px", marginBottom: "0px" }}
+        exit={{ height: "0px", marginBottom: "0px" }}
         animate={
           isOpen
-            ? { height: "auto", marginTop: "32px" }
-            : { height: "0px", marginTop: "0px" }
+            ? { height: "auto", marginBottom: "32px" }
+            : { height: "0px", marginBottom: "0px" }
         }
-        transition={{ duration: 0.1, delay: 0 }}
+        transition={{ duration: 0.1 }}
         className={styles.description}
       >
         <Typography color="oxford-blue" variant="small-body">

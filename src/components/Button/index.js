@@ -6,23 +6,16 @@ import Typography from "root/components/Typography";
 
 import styles from "./index.module.css";
 
-const Button = ({ onClick, children, arrow, element, active, emoji }) => {
+const Button = ({ onClick, children, arrow, element, active, size }) => {
   const Element = element;
-  const InnerElement = arrow ? "div" : Typography;
   const rootStyles = classNames(styles.root, {
-    [styles.active]: active
+    [styles.active]: active,
+    [styles[size]]: size !== "auto"
   });
 
   return (
     <Element className={rootStyles} onClick={onClick} type="button">
-      <InnerElement className={arrow ? styles.arrow : styles.content}>
-        {children}
-      </InnerElement>
-      {emoji && (
-        <span role="img" aria-label="point right" className={styles.emoji}>
-          👉
-        </span>
-      )}
+      {arrow ? children : <Typography>{children}</Typography>}
     </Element>
   );
 };
@@ -33,7 +26,7 @@ Button.propTypes = {
   arrow: PropTypes.bool,
   element: PropTypes.string,
   active: PropTypes.bool,
-  emoji: PropTypes.bool
+  size: PropTypes.oneOf(["small", "medium", "auto"])
 };
 
 Button.defaultProps = {
@@ -41,7 +34,7 @@ Button.defaultProps = {
   arrow: false,
   element: "button",
   active: false,
-  emoji: false
+  size: "auto"
 };
 
 export default Button;

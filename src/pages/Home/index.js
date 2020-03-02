@@ -10,12 +10,17 @@ import styles from "./index.module.css";
 function Home() {
   return (
     <div className={styles.root}>
-      <Typography className={styles.title} variant="h2" color="white" weight="bold">
+      <Typography
+        className={styles.title}
+        variant="h2"
+        color="white"
+        weight="bold"
+      >
         Are you HIPAA compliant?
       </Typography>
 
       <Link className={styles.start} to="/questions">
-        <Button element="div">Start</Button>
+        <Button size="small">Start</Button>
       </Link>
 
       <div className={styles.powered}>

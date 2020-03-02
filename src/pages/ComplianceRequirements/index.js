@@ -21,12 +21,12 @@ function ComplianceRequirements() {
     <div className={styles.root}>
       <div className={styles.content}>
         <div className={styles.title}>
-          <Typography color="klein-blue" variant="h3">
+          <Typography color="klein-blue" variant="body">
             HIPAA compliance requirements
           </Typography>
         </div>
         <div className={styles.result}>
-          <Typography color="oxford-blue" variant="body">
+          <Typography color="oxford-blue" variant="small-body">
             You&apos;ve covered <span>{`${yesAnswers().length} of the 8`}</span>{" "}
             HIPAA compliance requirements
           </Typography>

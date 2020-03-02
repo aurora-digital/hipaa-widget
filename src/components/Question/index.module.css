@@ -14,3 +14,7 @@
 
   max-width: $four-columns;
 }
+
+.description {
+  margin-top: $spacing-32;
+}

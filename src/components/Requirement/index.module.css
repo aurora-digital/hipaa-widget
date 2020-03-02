@@ -1,7 +1,7 @@
 @import "../../styles/all.css";
 
 .root {
-  padding: 0 $spacing-32 $spacing-52 $spacing-32;
+  padding: 0 0 $spacing-20 0;
 }
 
 .button {
@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 0;
   padding-bottom: calc($spacing-20 - 2px);
 
   background-color: white;
@@ -34,11 +35,11 @@
   position: relative;
   z-index: 1;
 
-  width: calc(100% + $spacing-32 + $spacing-32);
+  width: calc(100% + $gutter + $gutter);
 
   height: 2px;
 
-  margin-left: calc($spacing-32 * -1);
+  margin-left: calc($gutter * -1);
 
   background-color: $baby-blue;
 }
@@ -47,7 +48,9 @@
   position: relative;
   z-index: 0;
 
-  overflow: hidden;
+  width: 100%;
 
-  transform: translateY(0px) translateZ(0px);
+  padding-top: $spacing-32;
+
+  overflow: hidden;
 }
