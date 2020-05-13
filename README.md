@@ -39,10 +39,6 @@ We have a list of tasks available at the **project** tab here on Github.
 [trello]: https://trello.com/b/EKLeaNzU/pessoa
 [coc]: https://github.com/justmendes/pessoa/blob/master/CODE_OF_CONDUCT.md
 
-# Copy
-
-Copy for questions and results are -> https://3.basecamp.com/4319812/buckets/15145748/documents/2343954812
-
 # About
 
 This project is maintained by [Aurora](http://auroradigital.co).
